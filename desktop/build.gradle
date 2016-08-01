@@ -6,6 +6,10 @@ sourceSets.main.java.srcDirs = [ "src/" ]
 project.ext.mainClassName = "com.toprace.game.desktop.DesktopLauncher"
 project.ext.assetsDir = new File("../core/assets");
 
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.toprace.game.desktop.DesktopLauncher'
+}
+
 task run(dependsOn: classes, type: JavaExec) {
     main = project.mainClassName
     classpath = sourceSets.main.runtimeClasspath
