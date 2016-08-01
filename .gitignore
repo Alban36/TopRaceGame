@@ -2,3 +2,5 @@
 /desktop/build/
 *.log
 *.class
+.gradle
+.nb-gradle-properties
